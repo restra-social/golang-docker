@@ -1,5 +1,11 @@
-FROM golang:1.8-stretch
+FROM golang:1.8.3-alpine
 
+#install Glide
+
+RUN apk add --no-cache git curl \
+&& curl https://glide.sh/get | sh
+
+#install docker
 ENV DOCKER_VERSION 1.13.1
 
 RUN curl https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz | tar -xvz && \
