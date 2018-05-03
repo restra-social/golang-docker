@@ -2,7 +2,7 @@ FROM golang:1.8.3-alpine
 
 #install Glide
 
-RUN apk add --no-cache git curl \
+RUN apk add --no-cache git curl openssh ca-certificates\
 && curl https://glide.sh/get | sh
 
 #install docker
