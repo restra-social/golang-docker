@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: CLUSTER
+  cluster:
+    server: KUBERNETES_URL
+    api-version: v1
+users:
+- name: USER
+  user:
+    token: TOKEN
+
+contexts:
+- name: CLUSTER
+  context:
+    user: USER
+    cluster: CLUSTER
+
+current-context: CLUSTER

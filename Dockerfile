@@ -22,3 +22,7 @@ RUN curl https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz
     mv docker/docker /usr/local/bin/docker && \
     chmod +x /usr/local/bin/docker && \
     rm -r docker
+
+# Copy Kubectl Config
+RUN mkdir -p /root/.kube/
+COPY config /root/.kube/
