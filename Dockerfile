@@ -1,4 +1,4 @@
-FROM golang:1.9.4-alpine
+FROM golang:1.12-alpine
 
 #install Glide
 RUN apk add --no-cache git curl openssh openssl tar gzip bash ca-certificates && \
