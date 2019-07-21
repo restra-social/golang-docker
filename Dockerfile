@@ -25,10 +25,10 @@ RUN curl https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz
     rm -r docker
 
 # Copy Kubectl Config
-RUN mkdir -p /root/.kube/
-COPY config /root/.kube/
+#RUN mkdir -p /root/.kube/
+#COPY config /root/.kube/
 
 # set the kubectl Config pass from gitlab to container
-COPY set-env.sh /
-RUN chmod +x /set-env.sh
-ENTRYPOINT ["/set-env.sh"]
+#COPY set-env.sh /
+#RUN chmod +x /set-env.sh
+#ENTRYPOINT ["/set-env.sh"]
